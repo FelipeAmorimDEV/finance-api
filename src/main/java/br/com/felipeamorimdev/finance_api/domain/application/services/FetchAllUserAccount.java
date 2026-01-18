@@ -6,11 +6,13 @@ import br.com.felipeamorimdev.finance_api.domain.enterprise.entities.Account;
 import br.com.felipeamorimdev.finance_api.domain.enterprise.enums.AccountStatus;
 import br.com.felipeamorimdev.finance_api.domain.enterprise.enums.AccountType;
 import br.com.felipeamorimdev.finance_api.domain.enterprise.repositories.AccountsRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+@Service
 public class FetchAllUserAccount {
 
     AccountsRepository repository;
@@ -21,10 +23,7 @@ public class FetchAllUserAccount {
 
     public UserAccountsResponseDTO execute(FetchAccountsDTO dto) {
         List<Account> accounts = repository.findAllByUser(
-                dto.getUserId(),
-                dto.getStatus(),
-                dto.getType(),
-                dto.getSortBy()
+                dto.getUserId()
         );
 
         Double totalBalance = accounts.stream()

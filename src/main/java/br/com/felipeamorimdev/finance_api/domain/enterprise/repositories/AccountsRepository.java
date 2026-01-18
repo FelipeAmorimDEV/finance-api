@@ -10,7 +10,7 @@ public interface AccountsRepository {
 
     public Account save(Account account);
     public List<Account> findAllByUser(Long userId);
-    public List<Account> findAllByUser(Long userId, AccountStatus status, AccountType type, String sortBy);
+//    public List<Account> findAllByUser(Long userId, AccountStatus status, AccountType type, String sortBy);
     public Account findById(Long id);
     public Account update(Account account);
 }

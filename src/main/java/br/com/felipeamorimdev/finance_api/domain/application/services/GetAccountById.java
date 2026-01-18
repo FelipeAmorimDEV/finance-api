@@ -2,9 +2,11 @@ package br.com.felipeamorimdev.finance_api.domain.application.services;
 
 import br.com.felipeamorimdev.finance_api.domain.enterprise.entities.Account;
 import br.com.felipeamorimdev.finance_api.domain.enterprise.repositories.AccountsRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class GetAccountById {
 
     AccountsRepository repository;

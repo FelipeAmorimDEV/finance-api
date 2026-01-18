@@ -4,7 +4,9 @@ import br.com.felipeamorimdev.finance_api.domain.application.dtos.CreateAccountD
 import br.com.felipeamorimdev.finance_api.domain.enterprise.entities.Account;
 import br.com.felipeamorimdev.finance_api.domain.enterprise.enums.AccountStatus;
 import br.com.felipeamorimdev.finance_api.domain.enterprise.repositories.AccountsRepository;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CreateAccount {
 
     AccountsRepository repository;
